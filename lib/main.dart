@@ -43,15 +43,18 @@ class MyApp extends StatelessWidget {
               ],
               ),
               body: Container(),
-              bottomNavigationBar: BottomAppBar(
+              bottomNavigationBar: Container(
                   child: Container(
 
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.vertical(
                         top: Radius.circular(50),
                       ),
-                    ),
+                      color: Color(0xffF3F8FC),
+
+                  ),
                     height: 100,
+
 
 
                     child: Row(
