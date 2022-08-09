@@ -1,8 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-  <g id="그룹_130" data-name="그룹 130" transform="translate(-346 -29)">
-    <g id="그룹_3" data-name="그룹 3" transform="translate(263 -3462)">
-      <rect id="사각형_75" data-name="사각형 75" width="40" height="40" rx="8" transform="translate(95 3503)" fill="#6085ff" opacity="0.46" style="mix-blend-mode: multiply;isolation: isolate"/>
-      <rect id="사각형_76" data-name="사각형 76" width="40" height="40" rx="8" transform="translate(93 3501)" fill="#fff"/>
+  <defs>
+    <filter id="f1" x="0" y="0">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8" />
+    </filter>
+  </defs>
+  <g id="그룹_130" transform="translate(-346 -29)">
+    <g id="그룹_3"  transform="translate(263 -3462)">
+      <rect id="사각형_75"  width="40" height="40" rx="8" transform="translate(95 3503)" fill="#6085ff" opacity="0.46"  filter="url(#f1)"/>
+      <rect id="사각형_76"  width="40" height="40" rx="8" transform="translate(93 3501)" fill="#fff" />
     </g>
     <path id="person_FILL1_wght200_GRAD0_opsz48" d="M24,22.75a5.544,5.544,0,0,1-4.125-1.65A5.611,5.611,0,0,1,18.25,17a5.652,5.652,0,0,1,1.625-4.175A5.589,5.589,0,0,1,24,11.2a5.589,5.589,0,0,1,4.125,1.625A5.652,5.652,0,0,1,29.75,17a5.611,5.611,0,0,1-1.625,4.1A5.544,5.544,0,0,1,24,22.75ZM10,37.25v-2.9a3.915,3.915,0,0,1,.75-2.375,5.225,5.225,0,0,1,2-1.625,34.116,34.116,0,0,1,5.75-1.975,22.745,22.745,0,0,1,11,0,34.116,34.116,0,0,1,5.75,1.975,5.225,5.225,0,0,1,2,1.625A3.915,3.915,0,0,1,38,34.35v2.9Z" transform="translate(352 34.8)" fill="#0068b7"/>
   </g>

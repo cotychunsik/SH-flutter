@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,6 +16,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           toolbarHeight: 197,
+          titleSpacing: 20,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(50),
@@ -22,28 +25,28 @@ class MyApp extends StatelessWidget {
           backgroundColor: Color(0xffF3F8FC),
 
 
-        title: Text(
-            '어촌여행',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-              ),
-            ),
+              title: Text(
+                  '어촌여행',
+                style: TextStyle(fontWeight: FontWeight.bold,),
+                  ),
 
 
-              actions: [
-              Padding(
-              padding: EdgeInsets.symmetric(horizontal: 32),
-              child:
-              Icon(
-                  Icons.person,
-                  color: Color(0xff0068B7),
-                  size:40),
+                  actions: [
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 32),
+                        child:
+                        SvgPicture.asset('icx/user.svg'),
+                      ),
+
+                  ],
+
 
               ),
-              ],
+              body: Container(
+                width:50, height: 50, color: Colors.blue,
+                margin: EdgeInsets.all(20),
               ),
-              body: Container(),
-              bottomNavigationBar: Container(
+              bottomNavigationBar: SizedBox(
                   child: Container(
 
                     decoration: BoxDecoration(
@@ -65,11 +68,11 @@ class MyApp extends StatelessWidget {
                           IconButton(icon: Icon(Icons.qr_code_scanner_rounded), onPressed: () {}),
                           IconButton(icon: Icon(Icons.collections_bookmark_rounded), onPressed: () {}),
                           IconButton(icon: Icon(Icons.manage_search_rounded), onPressed: () {}),
-                          IconButton(icon: Icon(Icons.more_vert), onPressed: () {}),
-
-
-
-
+                          IconButton(icon: SvgPicture.asset(
+                              'icx/symbol.svg',
+                          width:36,
+                          height:25,
+                          ), onPressed: () {}),
               ],
             ),
           ),
