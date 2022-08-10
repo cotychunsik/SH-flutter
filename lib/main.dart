@@ -15,20 +15,22 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(useMaterial3: true),
       home: Scaffold(
         appBar: AppBar(
-          toolbarHeight: 197,
+          toolbarHeight: 100,
           titleSpacing: 20,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(50),
-            ),
-          ),
+          // shape: RoundedRectangleBorder(
+          //   borderRadius: BorderRadius.only(
+          //     bottomLeft: Radius.circular(50),
+          //   ),
+          // ),
           backgroundColor: Color(0xffF3F8FC),
 
 
-              title: Text(
-                  '어촌여행',
-                style: TextStyle(fontWeight: FontWeight.bold,),
-                  ),
+              title: Padding(
+                padding:EdgeInsets.only(
+                  left:20,),
+                  child: SvgPicture.asset('main_title.svg', width:160,),
+                ),
+
 
 
                   actions: [
@@ -37,15 +39,32 @@ class MyApp extends StatelessWidget {
                         child:
                         SvgPicture.asset('icx/user.svg'),
                       ),
-
                   ],
 
 
               ),
-              body: Container(
-                width:50, height: 50, color: Colors.blue,
-                margin: EdgeInsets.all(20),
+              body: Container(decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(50),
+
+                ),
+                color: Color(0xffF3F8FC),
+
               ),
+
+                height: 90,
+                width: double.infinity,
+                padding: EdgeInsets.only(
+                  left: 40, bottom: 20,
+                ),
+                child: SvgPicture.asset('main_subtitle.svg',
+                width:100,
+                    alignment: Alignment.centerLeft,
+               ),
+
+      ),
+
+
               bottomNavigationBar: SizedBox(
                   child: Container(
 
@@ -63,16 +82,21 @@ class MyApp extends StatelessWidget {
                     child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                        IconButton(icon: Icon(Icons.home_rounded), onPressed: () {}),
-                          IconButton(icon: Icon(Icons.workspace_premium), onPressed: () {}),
-                          IconButton(icon: Icon(Icons.qr_code_scanner_rounded), onPressed: () {}),
-                          IconButton(icon: Icon(Icons.collections_bookmark_rounded), onPressed: () {}),
-                          IconButton(icon: Icon(Icons.manage_search_rounded), onPressed: () {}),
-                          IconButton(icon: SvgPicture.asset(
-                              'icx/symbol.svg',
-                          width:36,
-                          height:25,
-                          ), onPressed: () {}),
+                          IconButton(
+                            onPressed: () {},
+                            icon: SvgPicture.asset('/icx_text/home_t.svg',),
+                              iconSize:50, ),
+                        IconButton(icon: SvgPicture.asset('/icx_text/stamp_collection_t.svg',),
+                        iconSize:50, onPressed: () {}),
+                          IconButton(icon: SvgPicture.asset('/icx_text/qrcode_t.svg'),
+                              iconSize:50, onPressed: () {}),
+                          IconButton(icon: SvgPicture.asset('/icx_text/ebook_t.svg'),
+                              iconSize:50, onPressed: () {}),
+                          IconButton(icon: SvgPicture.asset('/icx_text/search_t.svg'),
+                              iconSize:50, onPressed: () {}),
+                          IconButton(icon: SvgPicture.asset('/icx_text/sh_symbol_t.svg'),
+                              iconSize:50, onPressed: () {}),
+
               ],
             ),
           ),
