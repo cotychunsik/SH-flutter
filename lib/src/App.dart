@@ -24,14 +24,11 @@ class App extends StatelessWidget {
             shadowColor: Colors.transparent,
 
 
-
-
             title: Padding(
-              padding:EdgeInsets.only(
-                left:20,),
-              child: SvgPicture.asset('main_title.svg', width:160,),
+              padding: EdgeInsets.only(
+                left: 20,),
+              child: SvgPicture.asset('main_title.svg', width: 160,),
             ),
-
 
 
             actions: [
@@ -44,13 +41,15 @@ class App extends StatelessWidget {
 
 
           ),
-          body: Container(decoration: BoxDecoration(
-            borderRadius: BorderRadius.only(
+          body: Container(
+
+            decoration: BoxDecoration(
+
+              borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(50),
 
             ),
             color: Color(0xffF3F8FC),
-
           ),
 
             height: 90,
@@ -59,85 +58,55 @@ class App extends StatelessWidget {
               left: 40, bottom: 20,
             ),
             child: SvgPicture.asset('main_subtitle.svg',
-              width:100,
+              width: 100,
               alignment: Alignment.centerLeft,
             ),
 
           ),
 
 
-          bottomNavigationBar:  Container(
-
-
-
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.vertical(
-                top: Radius.circular(50),
-              ),
-              color: Color(0xffF3F8FC),
-
-            ),
-            height: 100,
-            child:BottomNavigationBar(
-              items: [
-                BottomNavigationBarItem(icon: SvgData(IconsPath.homeOff),
+          bottomNavigationBar: BottomNavigationBar(
+            type: BottomNavigationBarType.fixed,
+            backgroundColor: Color(0xffF3F8FC),
+            showSelectedLabels: false,
+            showUnselectedLabels: false,
+            currentIndex: 0,
+            items: [
+              BottomNavigationBarItem(icon: SvgData(IconsPath.homeOff),
                 activeIcon: SvgData(IconsPath.homeOn),
-                label: 'home',
-                ),
-                BottomNavigationBarItem(icon: SvgData(IconsPath.homeOff),
-                  activeIcon: SvgData(IconsPath.homeOn),
-                  label: 'home',
-                ),
-                BottomNavigationBarItem(icon: SvgData(IconsPath.homeOff),
-                  activeIcon: SvgData(IconsPath.homeOn),
-                  label: 'home',
-                ),
-                BottomNavigationBarItem(icon: SvgData(IconsPath.homeOff),
-                  activeIcon: SvgData(IconsPath.homeOn),
-                  label: 'home',
-                ),
-                BottomNavigationBarItem(icon: SvgData(IconsPath.homeOff),
-                  activeIcon: SvgData(IconsPath.homeOn),
-                  label: 'home',
-                ),
-                BottomNavigationBarItem(icon: SvgData(IconsPath.homeOff),
-                  activeIcon: SvgData(IconsPath.homeOn),
-                  label: 'home',
-                ),
-              ],
+                label: '홈',
+              ),
+              BottomNavigationBarItem(
+                icon: SvgData(IconsPath.stampCollectionOff),
+                activeIcon: SvgData(IconsPath.stampCollectionOn),
+                label: '나의여행스탬프',
+              ),
+              BottomNavigationBarItem(icon: SvgData(IconsPath.qrcodeOff),
+                activeIcon: SvgData(IconsPath.qrcodeOn),
+                label: '스탬프찍기',
+              ),
+              BottomNavigationBarItem(icon: SvgData(IconsPath.ebookOff),
+                activeIcon: SvgData(IconsPath.ebookOn),
+                label: '어촌힐링ebook',
+              ),
+              BottomNavigationBarItem(icon: SvgData(IconsPath.searchOff),
+                activeIcon: SvgData(IconsPath.searchOn),
+                label: '어촌계검색',
+              ),
+              BottomNavigationBarItem(icon: SvgData(IconsPath.shSearchOff),
+                activeIcon: SvgData(IconsPath.shSearchOn),
+                label: '상호금융영업점',
+              ),
+            ],
 
           ),
 
 
-          )
-
-          //
-          //             child: Row(
-          //                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          //                 children: [
-          //                   IconButton(
-          //                     onPressed: () {},
-          //                     icon: SvgPicture.asset('/icx_text/home_t.svg',),
-          //                       iconSize:50, ),
-          //                 IconButton(icon: SvgPicture.asset('/icx_text/stamp_collection_t.svg',)
-          //                     ,
-          //                 iconSize:50, color: Colors.black, onPressed: () {}),
-          //                   IconButton(icon: SvgPicture.asset('/icx_text/qrcode_t.svg'),
-          //                       iconSize:50, onPressed: () {}),
-          //                   IconButton(icon: SvgPicture.asset('/icx_text/ebook_t.svg'),
-          //                       iconSize:50, onPressed: () {}),
-          //                   IconButton(icon: SvgPicture.asset('/icx_text/search_t.svg'),
-          //                       iconSize:50, onPressed: () {}),
-          //                   IconButton(icon: SvgPicture.asset('/icx_text/sh_symbol_t.svg'),
-          //                       iconSize:50, onPressed: () {}),
-
-          // ],
         ),
-      onWillPop: () async{
-          return false;
-      },
-      );
 
 
-  }
+    onWillPop: () async {
+      return false;
+    });
+}
 }
