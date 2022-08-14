@@ -1,3 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="338" height="1" viewBox="0 0 338 1">
-  <line id="선_2" data-name="선 2" x2="338" transform="translate(0 0.5)" fill="none" stroke="#09a3ca" stroke-width="1" stroke-dasharray="5"/>
-</svg>
+<svg id="레이어_1" data-name="레이어 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 338 1"><title>dash</title><line id="선_2" data-name="선 2" y1="0.5" x2="338" y2="0.5" fill="none" stroke="#09a3ca" stroke-dasharray="5"/></svg>
