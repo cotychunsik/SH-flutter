@@ -4,6 +4,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'components/svg_src.dart';
+import 'pages/ebook.dart';
+import 'pages/home.dart';
+import 'pages/search.dart';
+import 'pages/sh_search.dart';
+import 'pages/stamp.dart';
 
 class App extends GetView<BottomNavController> {
   const App({Key? key}) : super(key: key);
@@ -15,96 +20,28 @@ class App extends GetView<BottomNavController> {
         child: Obx(
           () =>
                Scaffold(
-               backgroundColor: Color(0xffD5F2F2),
-              appBar: AppBar(
-                toolbarHeight: 80,
-                titleSpacing: 20,
-                // shape: RoundedRectangleBorder(
-                //   borderRadius: BorderRadius.only(
-                //     bottomLeft: Radius.circular(50),
-                //   ),
-                // ),
-                backgroundColor: Color(0xffF3F8FC),
-                elevation: 0,
 
 
-                title: Padding(
-                  padding: EdgeInsets.only(
-                    left: 20,),
-                  child: SvgPicture.asset(Deco.title, width: 160,),
-                ),
-
-
-                actions: [
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 32),
-                    child:
-                    Image.asset('assets/icx/user.png',),
-                  ),
-                ],
-
-
-              ),
 
               body:
                   IndexedStack(
                     index: controller.pageIndex.value,
                     children: [
-                    Column(
-                      children: [
-                        Container(
-
-                          decoration: BoxDecoration(
-
-                            borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(50),
-
-                          ),
-
-                          color: Color(0xffF3F8FC),
-                        ),
-
-                          height: 80,
-                          width: double.infinity,
-                          padding: EdgeInsets.only(
-                            left: 40, bottom: 20,
-                          ),
-
-                          child:
-                          SvgPicture.asset(Deco.subText,
-                            width: 150,
-                            alignment: Alignment.topLeft, ),
-
-                        ),
-                        Container(
-                          alignment: Alignment.center,
-                          height: 410,
-                          padding: EdgeInsets.all(10),
-                          child: Image.asset('assets/deco_elements/map.png',
-                          fit: BoxFit.contain, ),
-
-                        ),
-
-],
-                        ),
+                      const Home(),
+                    const Stamp(),
 
 
-                    Container(
-                      child: Center(child: Text('STAMP')),
-                    ),
+
 
                       Container(
                         child: Center(child: Text('QRCODE')),
                       ),
-                    Container(
-                      child: Center(child: Text('EBOOK')),
-                    ),
-                    Container(
-                      child: Center(child: Text('SEARCH')),
-                    ),
-                      Container(
-                        child: Center(child: Text('SHSEARCH')),
-                      ),
+
+                      const Ebook(),
+                      const Search(),
+                      const shSearch(),
+
+
     ],
     ),
 
@@ -116,6 +53,7 @@ class App extends GetView<BottomNavController> {
               bottomNavigationBar: BottomNavigationBar(
                 type: BottomNavigationBarType.fixed,
                 backgroundColor: Color(0xffF3F8FC),
+
                 showSelectedLabels: false,
                 showUnselectedLabels: false,
                 currentIndex: controller.pageIndex.value,

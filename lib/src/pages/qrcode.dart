@@ -7,10 +7,15 @@ class QrCode extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return
+    return   Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
 
-      Container(
-        color: Colors.red,
+      ),
+
+
+        child:
+          Center(child: Text('QRcode',)),
       );
   }
 }

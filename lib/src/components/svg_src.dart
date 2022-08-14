@@ -8,7 +8,7 @@ class SvgSrc extends StatelessWidget {
   final double? height;
   SvgSrc(this.icon, {
     Key? key,
-    this.height=150,
+    this.height=130,
   }) : super(key: key);
 
   @override
@@ -41,10 +41,25 @@ class Deco {
   static String get subText => 'assets/main_subtitle.svg';
   static String get divider=> 'assets/deco_elements/dash_divider.svg';
   static String get map => 'assets/deco_elements/main_map.svg';
+  static String get stampT => 'assets/deco_elements/stamp_title.svg';
+  static String get ebookT => 'assets/deco_elements/ebook_title.svg';
+  static String get searchT => 'assets/deco_elements/search_title.svg';
+  static String get shT => 'assets/deco_elements/sh_title.svg';
+
+
 }
 
 class Btn {
   static String get apBtn => 'assets/button/sns_apple.svg';
   static String get kaBtn => 'assets/button/sns_kakao.svg';
   static String get naBtn => 'assets/button/sns_naver.svg';
+}
+
+class Etc {
+  static String get userIcx => 'assets/icx/userICX.svg';
+  static String get userB => 'assets/icx/userB.svg';
+
+
+
+
 }
