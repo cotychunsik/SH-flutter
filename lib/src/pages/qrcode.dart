@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 
-class Upload extends StatelessWidget {
-  const Upload({Key? key}) : super(key: key);
+class QrCode extends StatelessWidget {
+  const QrCode({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -17,7 +17,7 @@ class App extends GetView<BottomNavController> {
                Scaffold(
                backgroundColor: Color(0xffD5F2F2),
               appBar: AppBar(
-                toolbarHeight: 100,
+                toolbarHeight: 80,
                 titleSpacing: 20,
                 // shape: RoundedRectangleBorder(
                 //   borderRadius: BorderRadius.only(
@@ -50,38 +50,52 @@ class App extends GetView<BottomNavController> {
                   IndexedStack(
                     index: controller.pageIndex.value,
                     children: [
-                    Container(
+                    Column(
+                      children: [
+                        Container(
 
-                      decoration: BoxDecoration(
+                          decoration: BoxDecoration(
 
-                        borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(50),
+                            borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(50),
 
-                      ),
+                          ),
 
-                      color: Color(0xffF3F8FC),
-                    ),
+                          color: Color(0xffF3F8FC),
+                        ),
 
-                      height: 90,
-                      width: double.infinity,
-                      padding: EdgeInsets.only(
-                        left: 40, bottom: 20,
-                      ),
+                          height: 80,
+                          width: double.infinity,
+                          padding: EdgeInsets.only(
+                            left: 40, bottom: 20,
+                          ),
 
-                      child:
-                      SvgPicture.asset(Deco.subText,
-                        width: 100,
-                        alignment: Alignment.centerLeft, ),
+                          child:
+                          SvgPicture.asset(Deco.subText,
+                            width: 150,
+                            alignment: Alignment.topLeft, ),
+
+                        ),
+                        Container(
+                          alignment: Alignment.center,
+                          height: 410,
+                          padding: EdgeInsets.all(10),
+                          child: Image.asset('assets/deco_elements/map.png',
+                          fit: BoxFit.contain, ),
+
+                        ),
+
+],
+                        ),
 
 
-
-
-                    ),
                     Container(
                       child: Center(child: Text('STAMP')),
                     ),
 
-
+                      Container(
+                        child: Center(child: Text('QRCODE')),
+                      ),
                     Container(
                       child: Center(child: Text('EBOOK')),
                     ),
@@ -91,9 +105,8 @@ class App extends GetView<BottomNavController> {
                       Container(
                         child: Center(child: Text('SHSEARCH')),
                       ),
-                    ]
-                  ),
-
+    ],
+    ),
 
 
 
@@ -137,10 +150,9 @@ class App extends GetView<BottomNavController> {
                 ],
 
               ),
+    ),
+    ),
 
-
-          ),
-           ),
 
 
 

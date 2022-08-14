@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:contact/src/components/message_popup.dart';
-import 'package:contact/src/pages/upload.dart';
+import 'package:contact/src/pages/qrcode.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -26,7 +26,7 @@ class BottomNavController extends GetxController {
     var page = PageName.values[value];
     switch (page) {
       case PageName.QRCODE:
-        Get.to(() => const Upload());
+        Get.to(() => const QrCode());
         break;
       case PageName.HOME:
       case PageName.STAMP:
