@@ -28,13 +28,14 @@ class shSearch extends StatelessWidget {
       ),
 
 
-      actions: [
-      Padding(
-      padding: EdgeInsets.symmetric(horizontal: 32),
-      child:
-      Image.asset('assets/icx/user.png',),
-    ),
-    ],
+        actions: [
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 15),
+            child:
+            IconButton(onPressed: () {  }, icon: SvgSrc(Etc.userB, ),),
+          ),
+        ],
+
 
 
     ),
