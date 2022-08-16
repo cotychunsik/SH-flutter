@@ -47,25 +47,13 @@ class _QRViewExampleState extends State<QrCode> {
                     Text(
                         'Barcode Type: ${describeEnum(result!.format)}   Data: ${result!.code}')
                   else
-                    const Text('스탬프 투어 참여방법'),
+                    const Text('스탬프 투어 참여방법',
+                      style: TextStyle(fontSize:17, fontWeight: FontWeight.bold),),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
-                      // Container(
-                      //   margin: const EdgeInsets.all(8),
-                      //   child: ElevatedButton(
-                      //       onPressed: () async {
-                      //         await controller?.toggleFlash();
-                      //         setState(() {});
-                      //       },
-                      //       child: FutureBuilder(
-                      //         future: controller?.getFlashStatus(),
-                      //         builder: (context, snapshot) {
-                      //           return Text('Flash: ${snapshot.data}');
-                      //         },
-                      //       )),
-                      // ),
+
                       Column(
                         children: [
                           Container(

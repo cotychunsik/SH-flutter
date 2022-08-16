@@ -45,6 +45,7 @@ class Deco {
   static String get ebookT => 'assets/deco_elements/ebook_title.svg';
   static String get searchT => 'assets/deco_elements/search_title.svg';
   static String get shT => 'assets/deco_elements/sh_title.svg';
+  static String get loginT => 'assets/login_text.svg';
 
 
 }

@@ -1,6 +1,7 @@
 import 'package:contact/src/components/svg_src.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 
 import 'login.dart';
 
@@ -34,13 +35,14 @@ class Stamp extends StatelessWidget {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 15),
             child:
-            IconButton(onPressed: () {
-              const Login();
+            IconButton(onPressed: (
+                ) {
+              Get.to(() => const Login());
 
-            }, icon: SvgSrc(Etc.userB, ),),
+            },
+              icon: SvgSrc(Etc.userB, ),),
           ),
         ],
-
 
     ),
       body: Container()

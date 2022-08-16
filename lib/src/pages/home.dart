@@ -1,6 +1,7 @@
 import 'package:contact/src/components/svg_src.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 
 import 'login.dart';
 
@@ -36,7 +37,7 @@ class Home extends StatelessWidget {
                 child:
                 IconButton(onPressed: (
                     ) {
-                  const Login();
+                  Get.to(() => const Login());
 
                 },
                   icon: SvgSrc(Etc.userB, ),),

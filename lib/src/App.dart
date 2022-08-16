@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'components/svg_src.dart';
 import 'pages/ebook.dart';
 import 'pages/home.dart';
+import 'pages/qrcode.dart';
 import 'pages/search.dart';
 import 'pages/sh_search.dart';
 import 'pages/stamp.dart';
@@ -32,10 +33,10 @@ class App extends GetView<BottomNavController> {
 
 
 
-
-                      Container(
-                        child: Center(child: Text('QRCODE')),
-                      ),
+                      const QrCode(),
+                      // Container(
+                      //   child: Center(child: Text('QRCODE')),
+                      // ),
 
                       const Ebook(),
                       const Search(),

@@ -1,6 +1,9 @@
 import 'package:contact/src/components/svg_src.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+
+import 'login.dart';
 
 class shSearch extends StatelessWidget {
   const shSearch({Key? key}) : super(key: key);
@@ -32,10 +35,14 @@ class shSearch extends StatelessWidget {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 15),
             child:
-            IconButton(onPressed: () {  }, icon: SvgSrc(Etc.userB, ),),
+            IconButton(onPressed: (
+                ) {
+              Get.to(() => const Login());
+
+            },
+              icon: SvgSrc(Etc.userB, ),),
           ),
         ],
-
 
 
     ),
