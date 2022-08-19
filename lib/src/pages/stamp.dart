@@ -45,7 +45,12 @@ class Stamp extends StatelessWidget {
         ],
 
     ),
-      body: Container()
+      body: Center(
+        child: const Text(
+          '수집한 어촌여행 스탬프가 없습니다. ',
+          style: TextStyle(fontSize: 13,),
+        ),
+      )
     );
 
   }

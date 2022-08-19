@@ -46,43 +46,45 @@ class Home extends StatelessWidget {
 
 
         ),
-      body: Column(
-          children: [
-            Container(
+      body: Center(
+        child: Column(
+            children: [
+              Container(
 
-              decoration: BoxDecoration(
+                decoration: BoxDecoration(
 
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(50),
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(50),
 
+                  ),
+
+                  color: Color(0xffF3F8FC),
                 ),
 
-                color: Color(0xffF3F8FC),
+                height: 80,
+                width: double.infinity,
+                padding: EdgeInsets.only(
+                  left: 40, bottom: 20,
+                ),
+
+                child:
+                SvgPicture.asset(Deco.subText,
+                  width: 130,
+                  alignment: Alignment.topLeft, ),
+
               ),
+              Container(
+                alignment: Alignment.center,
+                height: 420,
+                padding: EdgeInsets.all(15),
+                child: Image.asset('assets/deco_elements/map.png',
+                  fit: BoxFit.contain, ),
 
-              height: 80,
-              width: double.infinity,
-              padding: EdgeInsets.only(
-                left: 40, bottom: 20,
-              ),
+          ),
 
-              child:
-              SvgPicture.asset(Deco.subText,
-                width: 130,
-                alignment: Alignment.topLeft, ),
-
-            ),
-            Container(
-              alignment: Alignment.center,
-              height: 420,
-              padding: EdgeInsets.all(15),
-              child: Image.asset('assets/deco_elements/map.png',
-                fit: BoxFit.contain, ),
-
-        ),
-
-      ],
-                     ),
+        ],
+                       ),
+      ),
     );
   }
 }
